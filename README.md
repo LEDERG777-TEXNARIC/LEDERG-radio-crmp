@@ -11,7 +11,7 @@ This repository is the source of custom LEDERG radio playlists. The launcher syn
 
 ## Delete a station
 
-Delete the station folder, or remove all supported audio files from it, and push to `main`. The next sync deletes only previously LEDERG-managed tracks that no longer exist in the repository. Untracked local files are preserved.
+Delete the station folder, or remove all supported audio files from it, and push to `main`. On the next launcher start, the station disappears from the in-game wheel. Any leftover local-only files are preserved under `resound/radio-local-backup/` rather than left as a ghost station.
 
 ## Current station folders
 
