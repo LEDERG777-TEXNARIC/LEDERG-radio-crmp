@@ -6,8 +6,8 @@ This repository is the source of custom LEDERG radio playlists. The launcher syn
 
 1. Create a folder in the repository root. **Its folder name becomes the station name shown in game.**
 2. Put music files directly inside the folder. Supported formats: `.mp3`, `.ogg`, `.wav`.
-3. Commit and push to `main`. The launcher downloads new/changed tracks before launching the game.
-4. Replace a song or add another track and push to update the playlist.
+3. Commit and push to `main`. GitHub Actions refreshes `radio-index.json` automatically; the launcher downloads new/changed tracks before launching the game.
+4. Replace a song or add another track and push to update the playlist. The updated station list is picked up on the next launcher start.
 
 ## Delete a station
 
@@ -29,4 +29,5 @@ Empty folders with only a README are placeholders; a station becomes active only
 - Put tracks directly inside a station folder (not in nested folders).
 - Keep folder names short; the in-game radio wheel displays them.
 - Individual GitHub repository files have a 100 MB limit. Use compressed audio and split long recordings.
+- Do not edit `radio-index.json` by hand; the workflow regenerates it from station folders and audio files.
 - Only upload music you have permission to distribute.
