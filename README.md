@@ -1,22 +1,32 @@
 # LEDERG CR:MP — Radio stations
 
-This repository is the source of the custom LEDERG radio playlists. The launcher synchronizes it into the game client automatically.
+This repository is the source of custom LEDERG radio playlists. The launcher synchronizes it into the game client before launch.
 
 ## Add a station
 
-1. Create a folder in the repository root. **The folder name becomes the station name shown in the game.**
-2. Put music files directly inside that folder. Supported formats for the synchronizer: `.mp3`, `.ogg`, `.wav`, `.flac`, `.m4a`, `.opus`.
-3. Commit and push to `main`. The launcher syncs the station before launching the game; the station appears when it contains at least one supported audio file.
-4. Add or replace songs to update its playlist. The radio plugin reads tracks from the station folder.
+1. Create a folder in the repository root. **Its folder name becomes the station name shown in game.**
+2. Put music files directly inside the folder. Supported formats: `.mp3`, `.ogg`, `.wav`.
+3. Commit and push to `main`. The launcher downloads new/changed tracks before launching the game.
+4. Replace a song or add another track and push to update the playlist.
 
 ## Delete a station
 
-Delete the whole station folder (or remove every audio track from it) and push to `main`. The next synchronization removes the radio's previously managed songs from the client. Other unrelated user files are not deleted.
+Delete the station folder, or remove all supported audio files from it, and push to `main`. The next sync deletes only previously LEDERG-managed tracks that no longer exist in the repository. Untracked local files are preserved.
+
+## Current station folders
+
+- `LEDERG FM`
+- `LEDERG RAP`
+- `LEDERG RUSSIAN`
+- `LEDERG ROCK`
+- `LEDERG CHILL`
+- `LEDERG ELECTRONIC`
+
+Empty folders with only a README are placeholders; a station becomes active only when it has at least one supported audio track.
 
 ## Notes
 
-- Put audio files directly inside a station folder, not in nested subfolders.
-- Keep station folder names short; they are displayed in the game UI.
-- The repository stores tracks and station names only; the game plug-in/runtime is managed separately.
-- GitHub limits individual ordinary repository files to 100 MB. Prefer compressed audio or split long sets into several tracks.
-- Only upload audio you have permission to distribute.
+- Put tracks directly inside a station folder (not in nested folders).
+- Keep folder names short; the in-game radio wheel displays them.
+- Individual GitHub repository files have a 100 MB limit. Use compressed audio and split long recordings.
+- Only upload music you have permission to distribute.
