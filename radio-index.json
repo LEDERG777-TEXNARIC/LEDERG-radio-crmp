@@ -1,7 +1,14 @@
 {
   "branch": "main",
-  "files": [],
-  "fingerprint": "d2032ebde77dc5309bc98c1154b106ae82b3ad0a9e333e1192b1533d56de6353",
+  "files": [
+    {
+      "path": "LEDERG ROCK/Гурт Кулі - Слава Україн [mp3uk.net].mp3",
+      "sha": "eb0a27202030b05b315fa55b9f52221adebdd96a",
+      "size": 7636158,
+      "station": "LEDERG ROCK"
+    }
+  ],
+  "fingerprint": "4fbd1c70e8ed1eb4fe393dca1e39b5e41a0745c34b36267abf5c57f0a3117328",
   "repository": "LEDERG777-TEXNARIC/LEDERG-radio-crmp",
   "schema": 1,
   "stations": [
